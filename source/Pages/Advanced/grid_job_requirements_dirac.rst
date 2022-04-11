@@ -1,5 +1,5 @@
 
-.. _job-requirements:
+.. _d-job-requirements:
 
 *********************
 Grid job requirements
@@ -18,7 +18,7 @@ scheduler. Job requirements are provided as parameters in the :abbr:`JDL
     :depth: 4
     
 
-.. _req-syntax:
+.. _d-req-syntax:
 
 ==================
 Requirement syntax
@@ -34,10 +34,10 @@ Job requirements are written as an optional statement in the :abbr:`JDL (Job Des
 Requirements
 ============
 
-.. _req-wallclock:
+.. _d-req-wallclock:
 
 Specifying Wall Clock time via the queue
-==========================
+========================================
 
 Typically on grid sites, by specifying the wall clock time requirement the scheduler picks a
 queue which is long enough for running the job. In the DIRAC configuration at SURF site (Gina), only the long queue (Walltime of 96 hours) is supported at this point. You can use the following convention to specify it::
@@ -47,10 +47,10 @@ queue which is long enough for running the job. In the DIRAC configuration at SU
 If you do not specify this, the jobs that run at SURF will automatically be scheduled on the long queue. If you specify any other queue your jobs will not run at SURF site.
 
 
-.. _req-cputime
+.. _d-req-cputime:
 
 Specifying CPU Time
-===========================
+===================
 
 You may also choose to specify a CPU Time, but at SURF site all jobs will land on the long queue (96 hours) irrespective of the CPU Time specified. But specifying this attribute may offer flexibility for you to use the same JDL for different grid sites where a CPU Time attribute is used to match the job to the correct queue. You can specify this attribute as follows::
 
@@ -63,7 +63,7 @@ You may also choose to specify a CPU Time, but at SURF site all jobs will land o
 
 
 
-.. _req-ce:
+.. _d-req-ce:
 
 Selecting particular Grid site or CE
 =====================================
@@ -76,10 +76,10 @@ You may choose a specific Grid site or a :abbr:`CE (Compute Element)`   to run y
 If you are using DIRAC to submit your jobs, you do not have to specify either one of the parameters (unless you want your jobs to/not to run at a specific site).
 
 
-.. _req-multicore:   
+.. _d-req-multicore:   
    
-Multicore jobs
-==============
+DIRAC Multicore jobs
+====================
 
 ``Numberof Processors`` is the number of CPU cores requested. ``SMPGranularity`` is the number of cores that must be scheduled on the same host::
 
